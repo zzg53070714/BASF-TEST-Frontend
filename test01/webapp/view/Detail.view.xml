@@ -1,0 +1,58 @@
+<mvc:View controllerName="basf.test01.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic"
+	xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:vbm="sap.ui.vbm">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{EmployeeID}"></ObjectHeader>
+			<Image src="{PhotoPat}" width="50%"/>
+			<VBox class="sapUiSmallMargin">
+				<form:SimpleForm id="SimpleFormDisplay354wideDual" editable="false" layout="ResponsiveGridLayout" title="Detail" labelSpanXL="4"
+					labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0"
+					columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+					<form:content>
+						<core:Title text="Basic"/>
+						<Label text="FirstName"/>
+						<Text id="FirstName" text="{FirstName}"/>
+						<Label text="LastName"/>
+						<Text text="{LastName}"/>
+						<Label text="BirthDate"/>
+						<Text text="{BirthDate}"/>
+						<Label text="Address"/>
+						<Text text="{Address}"/>
+						<Label text="City"/>
+						<Text text="{City}"/>
+						<Label text="Region"/>
+						<Text text="{Region}"/>
+						<Label text="PostalCode"/>
+						<Text text="{PostalCode}"/>
+						<Label text="Country"/>
+						<Text text="{Country}"/>
+						<Label text="HomePhone"/>
+						<Text text="{HomePhone}"/>
+						<Label text="Extension"/>
+						<Text text="{Extension}"/>
+						<Label text="Notes"/>
+						<Text text="{Notes}"/>
+						<Label text="PhotoPath"/>
+						<Text text="{PhotoPath}"/>
+						<core:Title text="Position"/>
+						<Label text="Title"/>
+						<Text text="{Title}"/>
+						<Label text="TitleOfCourtesy"/>
+						<Text text="{TitleOfCourtesy}"/>
+						<Label text="HireDate"/>
+						<Text text="{HireDate}"/>
+						<Label text="ReportsTo"/>
+						<Link text="{ReportsTo}" press="handleLinkPress"/>
+					</form:content>
+				</form:SimpleForm>
+			</VBox>
+			<VBox class="sapUiSmallMargin">
+				<vbm:GeoMap id="GeoMap"/>
+			</VBox>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	</semantic:DetailPage>
+</mvc:View>

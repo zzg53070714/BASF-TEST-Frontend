@@ -1,0 +1,12 @@
+Description=Northwind
+Type=HTTP
+Authentication=NoAuthentication
+Name=Northwind
+ProxyType=Internet
+URL=https://services.odata.org
+
+WebIDEUsage=odata_gen
+WebIDEEnabled=true
+WebIDESystem=Northwind
+
+
